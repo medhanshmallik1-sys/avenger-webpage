@@ -8,6 +8,7 @@
         body{
             margin: 0;
             font-family:'Times New Roman', Times, serif;
+            text-align:center;
         }
         .topnav {
             overflow: hidden;
@@ -43,5 +44,25 @@
         <a href="Black Widow.html">Black Widow</a>
         <a href="Vision.html">Vision</a>
     </div>
+    <section>
+        <img class="mySlides" src="Avengers-_Endgame.jpeg" style="height:500px; width:1000px;">
+        <img class="mySlides" src="avengers-comic.jpg" style="height:500px; width: 1000px;;">
+    </section>
+    <script>
+        var myIndex=0;
+        carosel();
+        function carosel(){
+            var i;
+            var x=document.getElementsByClassName("mySlides");
+            for(i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+            myIndex++;
+            if(myIndex>x.length){myIndex=1}
+            x[myIndex-1].style.display="block";
+            setTimeout(carosel,3000);
+        }
+    </script>
+    <h1>Avengers</h1>
 </body>
 </html>
